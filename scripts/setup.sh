@@ -14,6 +14,14 @@ then
 
 fi
 
+
+sudo apt-get update  >> /tmp/setup.log 2>&1
+
+sudo apt-get install curl git -y >> /tmp/setup.log 2>&1
+
+echo $?
+
+
 if id "$name" > /dev/null 2>&1
 
 then
@@ -22,4 +30,8 @@ then
 	echo "Hello $name !"
 else
         echo "User $name not found"
+	
 fi
+
+
+
