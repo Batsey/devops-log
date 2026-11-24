@@ -30,7 +30,10 @@ then
 	echo "Hello $name !"
 else
         echo "User $name not found"
-	
+	echo "creating a new user"
+	sudo adduser "$name"
+	sudo usermod -aG sudo "$name" 
+	echo "user $name is created!"	
 fi
 
 
