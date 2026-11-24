@@ -19,14 +19,14 @@ sudo apt-get update  >> /tmp/setup.log 2>&1
 
 sudo apt-get install curl git -y >> /tmp/setup.log 2>&1
 
-echo $?
+
 
 
 if id "$name" > /dev/null 2>&1
 
 then
 	
-        echo "User $name found"
+        echo "User $name found, skipping creation"
 	echo "Hello $name !"
 else
         echo "User $name not found"
